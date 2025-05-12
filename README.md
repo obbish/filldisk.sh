@@ -1,5 +1,8 @@
 ### What it looks like
-``` :~$ sudo ./filldisk.sh
+
+```
+
+:~$ sudo ./filldisk.sh
 
 Writing to /dev/sda...
 Generating temp bulk file in RAM...
@@ -32,20 +35,26 @@ dd: error writing '/dev/sda': Invalid argument
 1+0 records in
 0+0 records out
 0 bytes copied, 0.000127586 s, 0.0 kB/s
-✅ Operation complete. ```
+✅ Operation complete.
 
+```
 
 ### What it's for
+
 When you have a short file that you want repeated over a disk.
 
 ### What it does
+
 Script repeats your short file into a larger temp file in RAM.
 
 ### What more
+
 Also makes a smaller temp file to fill up the last blocks. 
 
 ### What else
+
 Ends by padding the final blocks with zero.
 
 ### What
+
 It's a copy organized into three dd operations to maximize resource usage.
